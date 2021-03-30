@@ -1,23 +1,31 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <h1>Teleport Component</h1>
-  <teleport to='#portal-root'>
-    <Portal />
-  </teleport>
+  <h1>Slots</h1>
+  <Card></Card>
+  <Card>Card content</Card>
+  <Card>
+    <h2>Card Content</h2>
+  </Card>
+  <Card>
+    <img src="https://picsum.photos/200" alt="Image" />
+  </Card>
 </template>
 
 <script>
-import Portal from './components/Portal.vue'
+import Card from './components/Card_simple.vue'
 
 export default {
   name: 'App',
   components: {
-    Portal
+    Card,
   },
   data() {  
     return {
 
     }
+  },
+  methods: {
+
   }
 }
 </script>

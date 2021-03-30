@@ -1,22 +1,26 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <h1>Teleport Component</h1>
-  <teleport to='#portal-root'>
-    <Portal />
-  </teleport>
+  <h1>Methods</h1>
+  <h2>{{ add(2, 3, 5) }}</h2>
+  <h2>{{ add(5, 10, 15) }}</h2>
+  <h2>Multiply method {{ multiply(5) }}</h2>
 </template>
 
 <script>
-import Portal from './components/Portal.vue'
 
 export default {
   name: 'App',
-  components: {
-    Portal
-  },
   data() {  
     return {
-
+      baseMultiplier: 5
+    }
+  },
+  methods: {
+    add(a, b, c) {
+      return a + b + c
+    },
+    multiply(num) {
+      return num * this.baseMultiplier
     }
   }
 }

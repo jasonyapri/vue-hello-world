@@ -1,22 +1,27 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <h1>Teleport Component</h1>
-  <teleport to='#portal-root'>
-    <Portal />
-  </teleport>
+  <br>
+  <button @click="showPopup = true">Show</button>
+  <Popup v-show="showPopup" @close="closePopup"/>
 </template>
 
 <script>
-import Portal from './components/Portal.vue'
+import Popup from './components/Popup.vue'
 
 export default {
   name: 'App',
   components: {
-    Portal
+    Popup
   },
   data() {  
     return {
-
+      showPopup: false
+    }
+  },
+  methods: {
+    closePopup(name) {
+      this.showPopup = false
+      console.log('name: ', name)
     }
   }
 }

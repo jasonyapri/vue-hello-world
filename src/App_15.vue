@@ -1,24 +1,24 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <h1>Teleport Component</h1>
-  <teleport to='#portal-root'>
-    <Portal />
-  </teleport>
+  <h1>Components, v-model and Vue.js Devtools</h1>
+  <br>
+  <Input v-model="name" />
 </template>
 
 <script>
-import Portal from './components/Portal.vue'
+import Input from './components/Input.vue'
 
 export default {
   name: 'App',
   components: {
-    Portal
+    Input
   },
   data() {  
     return {
-
+      name: ''
     }
-  }
+  },
+  methods: {}
 }
 </script>
 

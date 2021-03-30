@@ -1,22 +1,18 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <h1>Teleport Component</h1>
-  <teleport to='#portal-root'>
-    <Portal />
-  </teleport>
+  <h1>Conditional List Rendering</h1>
+  <template v-for="name in names" :key="name">
+    <h2 v-if="name === 'Bruce'">{{ name }}</h2>
+  </template>  
 </template>
 
 <script>
-import Portal from './components/Portal.vue'
 
 export default {
   name: 'App',
-  components: {
-    Portal
-  },
   data() {  
     return {
-
+      names: ['Bruce', 'Clark', 'Diana']
     }
   }
 }

@@ -1,18 +1,19 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <h1>Teleport Component</h1>
-  <teleport to='#portal-root'>
-    <Portal />
-  </teleport>
+  <h1>Component Styles</h1>
+  <h4>App Component Text</h4>
+  <ChildStyles>
+    <h4>ChildStyles Component Tag</h4>
+  </ChildStyles>
 </template>
 
 <script>
-import Portal from './components/Portal.vue'
+import ChildStyles from './components/ChildStyles.vue'
 
 export default {
   name: 'App',
   components: {
-    Portal
+    ChildStyles
   },
   data() {  
     return {
@@ -32,5 +33,8 @@ export default {
   margin-top: 60px;
 }
 
+h4 {
+  color: orange;
+}
 </style>
 

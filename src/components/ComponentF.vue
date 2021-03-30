@@ -1,24 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <h1>Teleport Component</h1>
-  <teleport to='#portal-root'>
-    <Portal />
-  </teleport>
+  <h2>ComponentF</h2>
+  <h3>ComponentF Username: {{ username }}</h3>
 </template>
 
 <script>
-import Portal from './components/Portal.vue'
 
 export default {
-  name: 'App',
-  components: {
-    Portal
-  },
+  name: 'ComponentF',
   data() {  
     return {
 
     }
-  }
+  },
+  inject: ['username']
 }
 </script>
 
@@ -33,4 +27,3 @@ export default {
 }
 
 </style>
-

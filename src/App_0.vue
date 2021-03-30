@@ -1,19 +1,12 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <h1>Teleport Component</h1>
-  <teleport to='#portal-root'>
-    <Portal />
-  </teleport>
+  
 </template>
 
 <script>
-import Portal from './components/Portal.vue'
 
 export default {
   name: 'App',
-  components: {
-    Portal
-  },
   data() {  
     return {
 

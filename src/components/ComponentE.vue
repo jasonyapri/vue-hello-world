@@ -1,18 +1,15 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <h1>Teleport Component</h1>
-  <teleport to='#portal-root'>
-    <Portal />
-  </teleport>
+  <h2>ComponentE</h2>
+  <ComponentF />
 </template>
 
 <script>
-import Portal from './components/Portal.vue'
+import ComponentF from './ComponentF.vue'
 
 export default {
-  name: 'App',
+  name: 'ComponentE',
   components: {
-    Portal
+    ComponentF,
   },
   data() {  
     return {
@@ -33,4 +30,3 @@ export default {
 }
 
 </style>
-

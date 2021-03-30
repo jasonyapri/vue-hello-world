@@ -1,22 +1,26 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
-  <h1>Teleport Component</h1>
-  <teleport to='#portal-root'>
-    <Portal />
-  </teleport>
+  <h1>Provide and Inject</h1>
+  <h3>AppComponent Username: {{ username }}</h3>
+  <ComponentC />
 </template>
 
 <script>
-import Portal from './components/Portal.vue'
+import ComponentC from './components/ComponentC.vue'
 
 export default {
   name: 'App',
   components: {
-    Portal
+    ComponentC,
   },
   data() {  
     return {
-
+      username: 'jasonyapri'
+    }
+  },
+  provide() {
+    return {
+      username: this.username
     }
   }
 }
@@ -33,4 +37,3 @@ export default {
 }
 
 </style>
-
